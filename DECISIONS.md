@@ -23,5 +23,5 @@ One-sample two-tailed t-test of H₀: μ = $55,000 vs. Hₐ: μ ≠ $55,000, α 
 We did a 95% confidence interval for 10-year median earnings. This was consistent with rejecting the $55,000 hypothesis.
 
 ## Assignment 6: Regression  (2026-08-12)
-- First predictor removed and why: ____
+- First predictor removed and why: retention_rate was removed first because it had the highest p-value (0.789851), making it the most insignificant of the variables.
 - Multicollinearity handling: ____
