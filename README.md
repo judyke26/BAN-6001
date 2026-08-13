@@ -4,6 +4,8 @@ Beginning with a raw federal higher-education dataset spanning thousands of inst
 
 
 DATA
+
+
 Source:U.S. Department of Education
 Topic:College Value Contributors
 Size:10 Continuous variables, 3 categorical variables, 1407 rows
@@ -11,6 +13,8 @@ Research Question:Our team selected the College Scorecard dataset because, as gr
 
 
 FOLDERS
+
+
 assignment-03-descriptive-stats: Descriptive statistics and visuals
 assignment-04-probability: Probability and distributions
 assignment-05-inference: Hypothesis Testing and Confidence Intervals
