@@ -15,6 +15,7 @@
 - Normal vs. empirical, and why: We checked normality across several continuous variables. completion_rate came closest to a normal distribution (skewness ≈0.10, kurtosis ≈-0.07), with normal-model quartiles (0.463, 0.701) nearly matching the actual data quartiles (0.469, 0.700), so we treated it as approximately normal for probability estimates. Most other variables — admission_rate, undergrad_enrollment, tuition_out_of_state, median_grad_debt, median_earnings_10yr, avg_faculty_salary, and student_faculty_ratio — were meaningfully skewed, several right-skewed due to a small number of large research universities and expensive private schools, so we relied on empirical distributions for those instead of assuming normality.
 
 ## Assignment 5: Inference  (2026-08-09)
+- Decided to change control_type to two categories and combined "'private nonprofit' and 'private for-profit' to be 'private'.
 - What we tested, alpha, conclusion: 
 Test 1: Out-of-state-tuition 
 One-sample right-tailed t-test of H₀: μ ≤ $32,000 vs. Hₐ: μ > $32,000, α = 0.05. Sample mean = $34,294.57 (n = 1,407), t = 5.58, p ≈ 1.48×10⁻⁸. Since p < α, we reject H₀ — there's sufficient evidence average out-of-state tuition exceeds $32,000.
@@ -23,5 +24,5 @@ One-sample two-tailed t-test of H₀: μ = $55,000 vs. Hₐ: μ ≠ $55,000, α 
 We did a 95% confidence interval for 10-year median earnings. This was consistent with rejecting the $55,000 hypothesis.
 
 ## Assignment 6: Regression  (2026-08-12)
-- First predictor removed and why: retention_rate was removed first because it had the highest p-value (0.789851), making it the most insignificant of the variables.
-- Multicollinearity handling: ____
+- First predictor removed and why: Region dummy variables were dropped first because they had the highest p-values and were both insignificant.
+- Multicollinearity handling: Out of our original 14 predictors, only completion_rate and retention_rate appear to be strongly correlated (corr > 0.7 or corr < -0.7). retention_rate's high correlation with completion_rate likely inflated its standard error and contributed to its insignificance. After removing all insignificant predictors, there are no strong correlations between our final predictors. The correlation between completion_rate and pct_pell approaches the threshold of (-0.7, 0.7), but we decided to keep both in the model, as they are both significant predictors, and the correlation is still within the threshold.
